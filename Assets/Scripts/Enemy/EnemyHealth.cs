@@ -56,7 +56,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
 
-    void Death ()
+    private void Death ()
     {
         isDead = true;
 
