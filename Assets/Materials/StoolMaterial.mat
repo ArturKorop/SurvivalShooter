@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: StoolMaterial
-  m_Shader: {fileID: 4800000, guid: 799a72a7e5f5bec4ca234fd03e089e65, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -157,7 +157,7 @@ Material:
       data:
         first:
           name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .383447617, g: .18652682, b: .507352948, a: 1}
       data:
         first:
           name: _RimColor

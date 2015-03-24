@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -53,8 +53,8 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 3
     m_Resolution: 2
@@ -1091,6 +1091,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f6618a0da65fa45b24d5105d5d8422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1475480464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1475480456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15099f5ee559584089d5851df572def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: .5
+  attackDamage: 10
 --- !u!1001 &1654937913
 Prefab:
   m_ObjectHideFlags: 0
@@ -1213,44 +1226,32 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_Shadows.m_Strength
-      value: .899999976
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_DrawHalo
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
       propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 264661a642c271542841966646e53a7c, type: 2}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
+      propertyPath: m_Color.r
+      value: .589674771
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
+      propertyPath: m_Color.g
+      value: .0347101949
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
+      propertyPath: m_Color.b
+      value: .786764741
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800002, guid: 264661a642c271542841966646e53a7c, type: 2}
+      propertyPath: m_Intensity
+      value: .779999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 264661a642c271542841966646e53a7c, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1354,3 +1355,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 149497274}
   Smoothing: 5
+--- !u!1 &1933964567
+GameObject:
+  m_PrefabParentObject: {fileID: 177766, guid: 74bd5cbf386cc5e43ae6bf0a27cad9e9, type: 2}
+  m_PrefabInternal: {fileID: 149497268}
+--- !u!114 &1933964568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933964567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 279843669}
+  damageImage: {fileID: 880662294}
+  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
