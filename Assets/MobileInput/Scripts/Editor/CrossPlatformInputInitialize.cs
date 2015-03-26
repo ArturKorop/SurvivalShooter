@@ -97,7 +97,6 @@ namespace UnitySampleAssets.CrossPlatformInput.Inspector
                 BuildTargetGroup.iOS,
                 BuildTargetGroup.WP8,
                 BuildTargetGroup.BlackBerry,
-                BuildTargetGroup.WSA
             };
 
 
